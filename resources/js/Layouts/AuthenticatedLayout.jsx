@@ -31,9 +31,10 @@ export default function AuthenticatedLayout({ header, children }) {
                                     Dashboardando
                                 </NavLink>
                                 <NavLink
-                                    href={route('dashboard')}
+                                    href={route('comprobante')}
+                                    active={route().current('comprobante')}
                                 >
-                                    usuario
+                                    Comprobante
                                 </NavLink>
                             </div>
                         </div>
@@ -69,14 +70,14 @@ export default function AuthenticatedLayout({ header, children }) {
                                         <Dropdown.Link
                                             href={route('profile.edit')}
                                         >
-                                            Profile
+                                            Perfil
                                         </Dropdown.Link>
                                         <Dropdown.Link
                                             href={route('logout')}
                                             method="post"
                                             as="button"
                                         >
-                                            Log Out
+                                            Cerrar Sesión
                                         </Dropdown.Link>
                                     </Dropdown.Content>
                                 </Dropdown>
