@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ComprobanteServController;
+use App\Http\Controllers\LibroVentaController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -22,6 +23,8 @@ Route::middleware('auth')->group(function () {
 
 
 Route::get('/comprobante', [ComprobanteServController::class, 'index'])->name('comprobante');
+
+Route::get('/libroVentas', [LibroVentaController::class, 'index'])->name('libroVentas');
 
 
 require __DIR__.'/auth.php';
