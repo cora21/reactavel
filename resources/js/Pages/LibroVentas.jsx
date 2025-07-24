@@ -22,6 +22,9 @@ export default function LibroVentas() {
                         <div className="p-6 text-gray-900">
                             Aquí va el contenido de Libro de Ventas HIJOS DE LA
                             GRAN PUTAAAAA
+                            <br />
+                            <br />
+                            <strong>Activa, si posee alguna de las siguientes opciones:</strong> 
                             <TableVenta />
                         </div>
                     </div>
