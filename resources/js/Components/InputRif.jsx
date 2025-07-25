@@ -33,6 +33,7 @@ export default function InputRif({ value = '', onChange, name = 'rif' }) {
 
     return (
             <input
+            
                 type="text"
                 name={name}
                 value={rif}
@@ -40,6 +41,8 @@ export default function InputRif({ value = '', onChange, name = 'rif' }) {
                 placeholder="Ej: J00000000"
                 className="border border-gray-300 rounded px-2 py-1 w-full text-sm"
                 maxLength={12}
+                tabIndex={1}
+
             />
     );
 }

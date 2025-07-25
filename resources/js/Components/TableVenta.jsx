@@ -2,6 +2,9 @@ import { useState } from 'react';
 import Table from 'react-bootstrap/Table';
 import SwitchSolo from '@/Components/SwitchSolo';
 import InputRif from './InputRif';
+import InputRazonSocial from './InputRazonSocial';
+import InputNcontrol from './Inputs/InputNcontrol';
+import InputCalender from './Inputs/inputCalender';
 
 
 
@@ -10,6 +13,7 @@ function DarkExample() {
   const [showNotas, setShowNotas,] = useState(false);
   const [showRetenciones, setShowRetenciones] = useState(false);
   const [showAlicuotaReducida, setShowAlicuotaReducida] = useState(false);
+  const [form, setForm] = useState({ ncontrol: '' });
 
 
 
@@ -113,11 +117,7 @@ function DarkExample() {
         <tbody>
           <tr>
             <td>
-              <input
-                type="date"
-                className="border border-gray-300 rounded px-2 py-1 w-full text-sm"
-                placeholder="Fecha"
-              />
+              <InputCalender name="fechaFactura" />
             </td>
             <td>
               <InputRif
@@ -126,18 +126,26 @@ function DarkExample() {
               />
             </td>
             <td>
-              <input
+              <InputRazonSocial
                 type="text"
-                className="border border-gray-300 rounded px-2 py-1 w-full text-sm"
-                placeholder="Nombre / Razón Social"
               />
             </td>
 
             {showNotas && <td><input type="text" className="border border-gray-300 rounded px-2 py-1 w-full text-sm" /></td>}
 
-            <td><input type="text" className="text-center border border-gray-300 rounded px-2 py-1 w-full text-sm" placeholder="000000" /></td>
-            <td><input type="text" className="text-center border border-gray-300 rounded px-2 py-1 w-full text-sm" placeholder="-" /></td>
-            <td><input type="text" className="text-center border border-gray-300 rounded px-2 py-1 w-full text-sm" placeholder="00-0000" /></td>
+            <td>
+             <InputNcontrol
+                  value={form.ncontrol}
+                  onChange={(val) => setForm({ ...form, ncontrol: val })}
+              />
+            </td>
+
+            <td>
+              <input type="text" className="text-center border border-gray-300 rounded px-2 py-1 w-full text-sm" placeholder="-" />
+              </td>
+            <td>
+              <input type="text" className="text-center border border-gray-300 rounded px-2 py-1 w-full text-sm" placeholder="00-0000" />
+              </td>
 
             {showNotas && (
               <>
