@@ -1,17 +1,17 @@
-import TableVenta from '@/Components/TableVenta';
+import BordeHundido from "@/Components/BordeHundido";
+import TableVenta from "@/Components/TableVenta";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head, useForm } from "@inertiajs/react";
-
 
 export default function LibroVentas() {
     const initialValues = {
         name: "",
         avatar: null,
         phone: "",
-        visibility: ""
-    }
-    const {data, errors, setData} = useForm(initialValues)
-    
+        visibility: "",
+    };
+    const { data, errors, setData } = useForm(initialValues);
+
     return (
         <AuthenticatedLayout>
             <Head title="Libro de Ventas" />
@@ -24,14 +24,18 @@ export default function LibroVentas() {
                             GRAN PUTAAAAA
                             <br />
                             <br />
-                            <strong>Activa, si posee alguna de las siguientes opciones:</strong> 
+                            <strong>
+                                Activa, si posee alguna de las siguientes
+                                opciones:
+                            </strong>
                             <TableVenta />
+                            <BordeHundido>
+                                
+                            </BordeHundido>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </AuthenticatedLayout>
     );
 }

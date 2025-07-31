@@ -39,7 +39,7 @@ export default function InputRif({ value = '', onChange, name = 'rif' }) {
                 value={rif}
                 onChange={handleChange}
                 placeholder="Ej: J00000000"
-                className="border border-gray-300 rounded px-2 py-1 w-full text-sm"
+                className="border border-gray-300 rounded px-2 py-1 w-full text-xs"
                 maxLength={12}
                 tabIndex={1}
 
